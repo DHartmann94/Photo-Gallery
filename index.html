@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogalerie</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo/logo.jpg">
+    <link>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body onload="load()">
+    <nav class="header">
+        <img class="logo-img" src="img/logo/logo.jpg" alt="Fotogallerie Logo">
+        <a href="#" class="toggle-btn" onclick="active()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navigator" id="show">
+            <ul>
+                <li><a href="#">Startseite</a></li>
+                <li><a href="#">Profil</a></li>
+                <li><a href="#">Impressum</a></li>
+                <button class="dnone" onclick="hide()">Schließen</button>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="photo-area" id="photogallerySection">
+    </div>
+
+    <div class="footer">
+        <img class="logo-img" src="img/logo/logo.jpg" alt="Fotogallerie Logo">
+        <div class="footer-child">
+            <ul>
+                <li><a href="#">Impressum</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Datenschutz</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img class="header-img" src="img/logo/instagram-2-128.jpg" alt="Instagram"></a>
+            <a href="#"><img class="header-img" src="img/logo/facebook-2-128.jpg" alt="Facebook"></a>
+            <a href="#"><img class="header-img" src="img/logo/youtube-2-128.jpg" alt="YouTube"></a>
+        </div>
+    </div>
+</body>
+
+</html>
