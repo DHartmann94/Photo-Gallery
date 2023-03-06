@@ -73,6 +73,3 @@ function diashow(i) {
 function active() {
     document.getElementById("show").classList.toggle(`active`);
 }
-function hide() {
-    document.getElementById("show").classList.remove(`active`);
-}
