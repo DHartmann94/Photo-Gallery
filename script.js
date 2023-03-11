@@ -8,24 +8,12 @@ let diashowActive = false;
 /* --- Photo Gallery --- */
 function load() {
     for (let i = 0; i < photogallery.length; i++) {
-        document.getElementById('photogallerySection').innerHTML += /*html*/ `
-        <div class="photo-box" id="openPhoto" onclick="openPhoto(${i})"><img src="${photogallery[i]}"></div>
-        `;
+        document.getElementById('photogallerySection').innerHTML += photoGalleryTemplate(i);
     }
 }
 
 function openPhoto(i) {
-    document.getElementById('photogallerySection').innerHTML = /*html*/ `
-   <div class="popup-section" id="popupSection">
-        <img class="symbol" onclick="previousPhoto(${i})" src="img/logo/left.jpg" als="Previous Photo">
-        <div class="column">
-            <img class="symbol2" onclick="closePhoto()" src="img/logo/close.jpg" alt="Close">
-            <img class="popup-photo" src="${photogallery[i]}">
-            <img class="symbol2" onclick="diashow(${i})" src="img/logo/play.jpg" alt="play Diashow">
-        </div>
-        <img class="symbol" onclick="nextPhoto(${i})" src="img/logo/right.jpg" alt="Next Photo">
-    </div>
-   `;
+    document.getElementById('photogallerySection').innerHTML = openPhotoTemplate(i);
     load();
 }
 
@@ -72,4 +60,25 @@ function diashow(i) {
 /* --- Toggle Button --- */
 function active() {
     document.getElementById("show").classList.toggle(`active`);
+}
+
+/* --- Template --- */
+function photoGalleryTemplate(i) {
+    return /*html*/`
+    <div class="photo-box" id="openPhoto" onclick="openPhoto(${i})"><img src="${photogallery[i]}"></div>
+    `;
+}
+
+function openPhotoTemplate(i) {
+    return /*html*/ `
+   <div class="popup-section" id="popupSection">
+        <img class="symbol" onclick="previousPhoto(${i})" src="img/logo/left.jpg" als="Previous Photo">
+        <div class="column">
+            <img class="symbol2" onclick="closePhoto()" src="img/logo/close.jpg" alt="Close">
+            <img class="popup-photo" src="${photogallery[i]}">
+            <img class="symbol2" onclick="diashow(${i})" src="img/logo/play.jpg" alt="play Diashow">
+        </div>
+        <img class="symbol" onclick="nextPhoto(${i})" src="img/logo/right.jpg" alt="Next Photo">
+    </div>
+    `;
 }
